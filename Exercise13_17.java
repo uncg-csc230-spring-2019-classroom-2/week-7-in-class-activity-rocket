@@ -1,5 +1,5 @@
 import java.util.Scanner;
- 
+ //This program takes the code from exercise13_17 and uses for the inclass assignment for week 7.
 public class Exercise13_17 {
  public static void main(String[] args) {
    Scanner input = new Scanner(System.in);
