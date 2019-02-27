@@ -31,8 +31,8 @@ public class Exercise13_17 {
 }
  
 class Complex implements Cloneable, Comparable<Complex> {
- private double a;
- private double b;
+    private double a,b;
+
  
  public Complex() {
  }
