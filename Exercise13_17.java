@@ -31,11 +31,8 @@ public class Exercise13_17 {
 }
  
 class Complex implements Cloneable, Comparable<Complex> {
- private double a;
- private double b;
- 
- public Complex() {
- }
+    private double a,b;
+
  
  Complex(double a, double b) {
    this.a = a;
@@ -44,6 +41,10 @@ class Complex implements Cloneable, Comparable<Complex> {
  
  public Complex(double a) {
    this(a, 0);
+ }
+    
+ public Complex() {
+     this(0);
  }
  
  public double getRealPart() {
@@ -85,13 +86,14 @@ class Complex implements Cloneable, Comparable<Complex> {
  public double abs() {
    return Math.sqrt(a * a + b * b);
  }
- 
+
+    @Override 
  public String toString() {
    if (b != 0)
      return a + " + " + b + "i";
    return a + "";
  }
- 
+ @Override
   public Object clone() {
    // Implement it
    try {
@@ -101,7 +103,7 @@ class Complex implements Cloneable, Comparable<Complex> {
      return null;
    }
  }
- 
+ @Override
  public int compareTo(Complex c) {
 	double v1 = this.abs();
 	double v2 = c.abs();
